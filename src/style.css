@@ -1,6 +1,443 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
 
-    background: #292929;
+body {
+    background: linear-gradient(135deg, #1a0000 0%, #800020 50%, #4d0000 100%);
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.hero-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 4px solid #ff1744;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(255, 23, 68, 0.5);
+}
+
+.hero-title {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #fff, #ff6090, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(3px 3px 0 #ff1744);
+}
+
+.hero-title ruby rt {
+    font-size: 0.5em;
+    color: #ff6090;
+    -webkit-text-fill-color: #ff6090;
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.4em;
+    color: #ffd700;
+    margin-top: 10px;
+    -webkit-text-fill-color: #ffd700;
+}
+
+.rank {
+    background: linear-gradient(45deg, #ff1744, #ff6090);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.hero-nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nav-label {
+    display: block;
+    color: #ff6090;
+    margin-bottom: 15px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link kbd {
+    background: linear-gradient(135deg, #ff1744, #ff4469);
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 0 #a00000;
+}
+
+.nav-link:hover kbd {
+    background: linear-gradient(135deg, #ff6090, #ff8aa8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #a00000;
+}
+
+.nav-link:active kbd {
+    transform: translateY(0);
+    box-shadow: 0 2px 0 #a00000;
+}
+
+.hero-image {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 4px solid white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03);
+}
+
+.hero-image figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #ff6090;
+}
+
+.divider {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #ff1744, #ff6090, #ff1744, transparent);
+    margin: 30px 0;
+    position: relative;
+}
+
+.divider::after {
+    content: '⚔';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ff6090;
+    font-size: 1.3rem;
+    margin: 15px 0 10px;
+}
+
+.bio-section p,
+.abilities-list > li {
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.1), rgba(255, 96, 144, 0.05));
+    padding: 15px;
+    border-left: 4px solid #ff1744;
+    border-radius: 5px;
+}
+
+.bio-section p {
+    margin-bottom: 20px;
+}
+
+.spoiler {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+.spoiler summary {
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+}
+
+.spoiler summary::before {
+    content: '▶ ';
+    color: #ff1744;
+}
+
+.spoiler[open] summary::before {
+    content: '▼ ';
+}
+
+.spoiler summary:hover {
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.2), rgba(255, 96, 144, 0.1));
+}
+
+.spoiler p {
+    padding: 15px;
+}
+
+.info-box,
+.status-box {
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.15), rgba(255, 96, 144, 0.1));
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #ff6090;
+}
+
+.info-box {
+    margin-top: 20px;
+}
+
+.status-box {
+    border-width: 3px;
+    border-color: #ff1744;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+.status-box legend {
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.stats-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.stats-table caption {
+    background: linear-gradient(135deg, #ff1744, #ff4469);
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.stats-table th,
+.stats-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 23, 68, 0.3);
+}
+
+.stats-table th {
+    background: rgba(255, 23, 68, 0.4);
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.stats-table tr:hover {
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.2), rgba(255, 96, 144, 0.1));
+}
+
+.stats-table meter {
+    width: 100%;
+    height: 20px;
+}
+
+.abilities-list {
+    list-style: none;
+    counter-reset: ability;
+}
+
+.abilities-list > li {
+    margin: 20px 0;
+    padding: 20px;
+    border-left-width: 5px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.abilities-list > li::before {
+    counter-increment: ability;
+    content: counter(ability);
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    background: linear-gradient(135deg, #ff1744, #ff6090);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.abilities-list > li:hover {
+    background: linear-gradient(135deg, rgba(255, 23, 68, 0.2), rgba(255, 96, 144, 0.15));
+}
+
+.abilities-list ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.abilities-list ul li::before {
+    content: '⚡ ';
+    color: #ffd700;
+}
+
+.abilities-list dt {
+    color: #ff6090;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.abilities-list dd {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.tooltip {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+    border: 2px dashed #ffd700;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.speech-bubble {
+    background: linear-gradient(135deg, #ff1744, #ff4469);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #ff1744;
+}
+
+.speech-bubble mark {
+    background: transparent;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.quote-section footer {
+    text-align: right;
+    margin-top: 20px;
+    font-style: italic;
+    color: #ff6090;
+}
+
+.banner {
+    background: linear-gradient(90deg, #ff1744, #ff6090, #ffd700, #ff6090, #ff1744);
+    background-size: 200% 100%;
+    padding: 15px;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 8px;
+    margin: 20px 0;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.ascii-art {
+    text-align: center;
+    color: #ff6090;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.audio-player {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.hero-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 23, 68, 0.5);
+    color: #ff6090;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-card {
+        padding: 15px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .abilities-list > li {
+        padding-left: 20px;
+    }
+
+    .abilities-list > li::before {
+        position: static;
+        display: inline-block;
+        margin-right: 10px;
+    }
 }
