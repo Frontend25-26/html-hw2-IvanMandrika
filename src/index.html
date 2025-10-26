@@ -1,11 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HW2</title>
+    <title>Аказа — Третья высшая луна | Карточка героя</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+<article class="hero-card">
+    <header class="hero-header">
+        <section class="title-section">
+            <h1 class="hero-title">
+                <ruby><b>Аказа</b><rt>Akaza</rt></ruby>
+                <span class="subtitle">✦ <mark class="rank">Третья высшая луна</mark> ✦</span>
+            </h1>
+            <nav class="hero-nav">
+                <b class="nav-label">Карточка персонажа в духе комикса</b>
+                <menu class="nav-menu">
+                    <li><a href="#bio" class="nav-link"><kbd>Биография</kbd></a></li>
+                    <li><a href="#skills" class="nav-link"><kbd>Способности</kbd></a></li>
+                    <li><a href="#quote" class="nav-link"><kbd>Цитата</kbd></a></li>
+                </menu>
+            </nav>
+        </section>
+        <figure class="hero-image">
+            <img src="img.png" alt="Аказа">
+            <figcaption><em>Боевой облик в дуэли на поезде</em></figcaption>
+        </figure>
+        <hr class="divider">
+    </header>
 
+    <main class="hero-content">
+        <section id="bio" class="bio-section">
+            <h2>Биография</h2>
+            <p>
+                <b>Аказа</b> — беспощадный и быстрый боец, <u>третья высшая луна</u> из двенадцати, в прошлом человек по
+                имени <i>Хаку́джи</i>.
+                Будучи ребёнком, терпел лишения и согрешил, чтобы помочь отцу, но утратил всё из-за трагедии. Его
+                озлобленность и боль сотворили демона.
+            </p>
+            <details class="spoiler">
+                <summary>
+                    <mark>Путь к демону</mark>
+                </summary>
+                <p>
+                    Потеряв семью, Хакуджи впал в отчаяние. К нему пришёл <abbr title="Мудзан Кибуцуji">Музан</abbr> и дал силу. Так Аказа стал верхней луной
+                    и врагом всего человечества.
+                </p>
+            </details>
+            <aside class="info-box">
+                <address>
+                    <b>Происхождение:</b> Япония, эпоха Тайсё.
+                </address>
+                <time datetime="1915-06-21"><small>Год становления демоном: 1915</small></time>
+            </aside>
+        </section>
+
+        <hr class="divider">
+
+        <section id="skills" class="skills-section">
+            <h2>Силы и способности</h2>
+            <table class="stats-table">
+                <caption><b>Характеристики</b></caption>
+                <thead>
+                <tr>
+                    <th>Атрибут</th>
+                    <th>Уровень</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Сила</td>
+                    <td><meter min="0" max="10" value="7">7</meter></td>
+                </tr>
+                <tr>
+                    <td>Скорость</td>
+                    <td><meter min="0" max="10" value="8">8</meter></td>
+                </tr>
+                <tr>
+                    <td>Регенерация</td>
+                    <td><meter min="0" max="10" value="9">9</meter></td>
+                </tr>
+                <tr>
+                    <td>Интуиция</td>
+                    <td><meter min="0" max="10" value="7">7</meter></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <ol class="abilities-list">
+                <li>
+                    <h3>Безграничная регенерация</h3>
+                    <dl>
+                        <dt>Способность</dt>
+                        <dd>Мгновенное восстановление урона, кроме атаки с дыханием солнца. Может восстановить голову,
+                            но не сразу.
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <h3>Искусство уничтожения <bdi>(Destructive Death)</bdi></h3>
+                    <ul>
+                        <li>Боевые приёмы с разрушительной энергией</li>
+                        <li>Символы на теле загораются во время боя</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Чутьё к сильным</h3>
+                    <dl>
+                        <dt>Особенность</dt>
+                        <dd>Чувствует боевой дух сильнейших, жаждет поединков только с достойными.</dd>
+                        <dt>Радар</dt>
+                        <dd>Способен найти воинов по ауре.</dd>
+                    </dl>
+                    <div class="tooltip">
+                        <var>Обнаруживает мощных противников по их энергии.</var>
+                    </div>
+                </li>
+            </ol>
+
+            <fieldset class="status-box">
+                <legend>Боевой статус</legend>
+                <output>Угроза: <data value="S">Высшая</data> луна</output>
+            </fieldset>
+        </section>
+
+        <hr class="divider">
+
+        <section id="quote" class="quote-section">
+            <h2>Цитата героя</h2>
+            <blockquote class="speech-bubble">
+                <q>
+                    <mark><b>Я не принимаю слабаков. Меня от них тошнит.</b></mark>
+                </q>
+            </blockquote>
+            <footer>
+                <cite>— Аказа, Третья высшая луна</cite>
+            </footer>
+        </section>
+
+        <hr class="divider">
+
+        <section class="extra-section">
+            <div class="banner">
+                <span>✦ Легенда демонов — Аказа! ✦</span>
+            </div>
+            <pre class="ascii-art">
+ ╭━━━━━━━╮
+ ┃ (● ●) ┃
+ ┃   ▽   ┃
+ ┃ Аказа ┃
+ ╰━━━━━━━╯
+            </pre>
+            <audio controls class="audio-player">
+                <source src="akaza.mp3" type="audio/mp3">
+            </audio>
+        </section>
+    </main>
+
+    <hr class="divider">
+
+    <footer class="hero-footer">
+        <section>
+            <p>
+                <time datetime="2025-10-11">Опубликовано: октябрь 2025</time><br>
+                <small>© <abbr title="Иван Мандрика">Иван Мандрика</abbr></small>
+            </p>
+        </section>
+    </footer>
+</article>
 </body>
 </html>
